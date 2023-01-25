@@ -17,7 +17,7 @@ body{
 border-radius: 5px;
 border: solid;
 text-align: center;
-font-size: 40px;
+font-size: 50px;
 padding: 5px;
 }
 
@@ -30,7 +30,7 @@ padding: 10px;
 }
 
 .question{
-    font-size: 20px;
+    font-size: 40px;
     text-align: center;
     padding-bottom: 10px;
 }
@@ -38,6 +38,7 @@ padding: 10px;
 .answerChoice{
     border-radius: 5px;
     padding: 10px;
+    font-size: 20px;
 }
 
 .answerChoice:hover, .start:hover, .next:hover{
