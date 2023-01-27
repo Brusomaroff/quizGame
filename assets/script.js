@@ -4,6 +4,7 @@ const rules = document.getElementById('rules')
 const questionContainer = document.getElementById('question-container')
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-btns')
+/* Should be var instead of const but wont display questions */
 const currentQuestionIndex = document.getElementById('question-container')
 var correct = "Correct";
 var wrong = "wrong";
