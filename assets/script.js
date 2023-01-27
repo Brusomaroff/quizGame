@@ -13,7 +13,7 @@ nextButton.addEventListener('click', () => {
     currentQuestionIndex++
     setNextQuestion()
 })
-
+/* Start Game function */
  function startGame(){
     console.log('Started')
     startButton.classList.add('hide')
@@ -22,15 +22,15 @@ nextButton.addEventListener('click', () => {
     currentQuestionIndex = 0
     setNextQuestion()
 }
-
+/* Next Question */
 function setNextQuestion(){
 resetState()
 showQuestion(currentQuestionIndex)
 }
-
+/* Show Question*/
 function showQuestion(question) {
     questionElement.innerText = question.question
-    question.answers.forEach(answer => {
+    question.answers(answer => {
         const button = document.createElement('button')
         button.innerText = answer.text
         button.classList.add('btn')
@@ -41,14 +41,14 @@ function showQuestion(question) {
         answerButtonsElement.appendChild(button)
     })
  }
-
+/* Reset Question */
  function resetState() {
     nextButton.classList.add('hide')
     while (answerButtonsElement.firstChild) {
         answerButtonsElement.removeChild(answerButtonsElement.firstChild)
     }
 }
-
+/* Answer Selection*/
 function selectAnswer(){
     const selectedButton = e.target
     const correct = selectedButton.dataset.correct
@@ -63,7 +63,7 @@ function selectAnswer(){
         startButton.classList.remove('hide')
     }
 }
-
+/* If Correct */
 function setStatusClass(element, correct) {
     clearStatusClass(element)
     if (correct) {
@@ -77,15 +77,15 @@ function clearStatusClass(element) {
     console.log.remove('correct')
     console.log.remove('wrong')
 }
-
+/* List of Questions */
 const question = [
     {
-        question: 'mkmkmk?',
+        question: 'What does HTML mean ?',
         answers: [
-            { text: 'Dylan', correct: true},
-            {text: 'Ryan', correct: false},
-            {text: 'Patrick', correct: false},
-            {text: 'Elijah', correct: false}
+            { text: 'HyperText Markup Language', correct: true},
+            {text: 'HyperText Markdown Language', correct: false},
+            {text: 'HyperText+ Markup Language', correct: false},
+            {text: 'HyperText+ Markdown Language', correct: false}
         ]
     },
     {
@@ -100,10 +100,10 @@ const question = [
     {
         question: 'nnvtvt?', 
         answers: [
-            { text: 'Brianna', correct: true},
-            { text: 'Dylan', correct: false},
-            { text: 'Elijah', correct: true},
-            { text: 'Skylar', correct: false}
+            { text: 'eee', correct: true},
+            { text: 'dedd', correct: false},
+            { text: 'detd', correct: true},
+            { text: 'me', correct: false}
         ]
     },
 
